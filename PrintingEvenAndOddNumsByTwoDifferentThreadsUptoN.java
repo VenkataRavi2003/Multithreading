@@ -1,43 +1,28 @@
 import java.util.Scanner;
 class EvenThread implements Runnable{
-
 	int N;
-
 	public EvenThread(int N){
-
-		this.N = N;
+	    this.N = N;
 	}
-
 	public void run(){
-
 		System.out.println("\n"+Thread.currentThread().getName()+" : Even Numbers ");
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-
 		for ( int i = 0 ; i <= N ; ++i ) {
-
 		     if(i % 2 == 0)
 		        System.out.print(i+",");			
 		}
 	}
 }
 class OddThread implements Runnable{
-
-
 	 int N;
-
 	 public OddThread(int N){
-
 		this.N = N;
 	 }
-
 	 public void run(){
-
 		System.out.println("\n"+Thread.currentThread().getName()+" : Odd Numbers");
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-
 		for ( int i = 0 ; i <= N ; ++i ) {
-
-		     if(i % 2 != 0)
+		      if(i % 2 != 0)
 		        System.out.print(i+",");			
 		}
 	}
